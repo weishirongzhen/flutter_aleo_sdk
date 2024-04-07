@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A sdk for aleo, use flutter_rust_bridge to call rust api
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/weishirongzhen/flutter_aleo_sdk'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'lanniaoershi' => 'lanniaoershi@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
@@ -20,4 +20,5 @@ A sdk for aleo, use flutter_rust_bridge to call rust api
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
+  s.vendored_frameworks = 'Frameworks/*.xcframework'
 end
