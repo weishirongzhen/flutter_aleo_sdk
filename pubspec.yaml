@@ -1,0 +1,32 @@
+name: flutter_aleo_sdk
+description: "A sdk for aleo, use flutter_rust_bridge to call rust api"
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  flutter_rust_bridge: 2.0.0-dev.29
+  convert: ^3.1.1
+  pointycastle: ^3.7.4
+  ed25519_edwards: ^0.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.memtopia.flutter_aleo_sdk
+        pluginClass: FlutterAleoSdkPlugin
+      ios:
+        pluginClass: FlutterAleoSdkPlugin
+
