@@ -4,6 +4,12 @@ A sdk for aleo, built with flutter_rust_bridge and aleo-rust
 
 ## usage
 
+
+```dart
+import 'package:flutter_aleo_sdk/flutter_aleo_sdk.dart' as aleo;
+
+```
+
 ```dart
 
 void main() async {
