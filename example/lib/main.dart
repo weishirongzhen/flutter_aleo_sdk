@@ -27,12 +27,13 @@ class _MyAppState extends State<MyApp> {
   String recipient =
       "aleo1m8gqcxedmqfp2ylh8f96w6n3z7zw0ucahenq0symvxpqg0f8sugqd4we6f";
 
-  String transactionId = "proving";
+  String transactionId = "waiting";
 
   bool transferring = false;
 
   String error = "";
 
+  int timeInSeconds = 0;
 
   @override
   void initState() {
@@ -75,7 +76,7 @@ class _MyAppState extends State<MyApp> {
               ),
               const Divider(),
               const Text(
-                "when transfering do not exit this screen, or else may be transfer error, but you credits will be safe",
+                "when transfering do not exit this screen, or else will transfer error, but you credits will be safe",
                 style: TextStyle(color: Colors.redAccent, fontSize: 12),
               ),
               Row(
@@ -89,7 +90,8 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
               Text("transactionId = $transactionId"),
-              if (error.isEmpty) Text("error = $error"),
+              if (timeInSeconds != 0) Text("take = ${timeInSeconds ~/ 1000} s"),
+              if (error.isNotEmpty) Text("error = $error"),
             ],
           ),
         ),
@@ -126,8 +128,12 @@ class _MyAppState extends State<MyApp> {
   }
 
   void makeTransfer() async {
+    final startTime = DateTime.now().millisecondsSinceEpoch;
     setState(() {
       transferring = true;
+      timeInSeconds = 0;
+      transactionId = "waiting";
+
     });
 
     await Future.delayed(const Duration(seconds: 1), () async {
@@ -138,9 +144,11 @@ class _MyAppState extends State<MyApp> {
         error = e.toString();
       }
     });
+    final endTime = DateTime.now().millisecondsSinceEpoch;
 
     setState(() {
       transferring = false;
+      timeInSeconds = endTime - startTime;
     });
   }
 }
