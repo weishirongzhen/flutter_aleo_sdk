@@ -1,3 +1,7 @@
+## 0.0.2
+
+* update lib
+
 ## 0.0.2-dev.1
 
 * update.
