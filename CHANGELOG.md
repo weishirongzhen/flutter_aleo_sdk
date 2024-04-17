@@ -1,6 +1,7 @@
 ## 0.0.2
 
-* add ios support.
+* update lib
+
 ## 0.0.2-dev.1
 
 * update.
