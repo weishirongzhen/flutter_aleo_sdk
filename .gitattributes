@@ -1,2 +1,0 @@
-ios/Frameworks/rust_lib_flutter_aleo_rust_lib.xcframework/ios-arm64/rust_lib_flutter_aleo_rust_lib.framework/rust_lib_flutter_aleo_rust_lib filter=lfs diff=lfs merge=lfs -text
-ios/Frameworks/rust_lib_flutter_aleo_rust_lib.xcframework/ios-arm64_x86_64-simulator/rust_lib_flutter_aleo_rust_lib.framework/rust_lib_flutter_aleo_rust_lib filter=lfs diff=lfs merge=lfs -text
