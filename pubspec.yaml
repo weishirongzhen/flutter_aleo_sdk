@@ -1,6 +1,6 @@
 name: flutter_aleo_sdk
 description: "A sdk for aleo, use flutter_rust_bridge to call rust api"
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/weishirongzhen/flutter_aleo_sdk
 
 environment:

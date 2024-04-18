@@ -1,3 +1,7 @@
+## 0.0.3
+
+* zip ios lib size
+
 ## 0.0.2
 
 * update lib
